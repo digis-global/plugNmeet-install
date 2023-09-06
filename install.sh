@@ -3,7 +3,7 @@
 WORK_DIR=/opt/plugNmeet
 
 ## https://raw.githubusercontent.com/mynaparrot/plugNmeet-install/main/install-files
-CONFIG_DOWNLOAD_URL="https://raw.githubusercontent.com/mynaparrot/plugNmeet-install/main/install-files"
+CONFIG_DOWNLOAD_URL="https://raw.githubusercontent.com/inme-digital-services/plugNmeet-install/main/install-files"
 
 ## https://github.com/mynaparrot/plugNmeet-client/releases/latest/download/client.zip
 CLIENT_DOWNLOAD_URL="https://github.com/mynaparrot/plugNmeet-client/releases/latest/download/client.zip"
