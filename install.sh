@@ -275,6 +275,17 @@ install_client() {
 
   sed -i "s/window.PLUG_N_MEET_SERVER_URL.*/window.PLUG_N_MEET_SERVER_URL = 'https:\/\/$PLUG_N_MEET_SERVER_DOMAIN'\;/g" \
     client/dist/assets/config.js
+  sed -i '/\/\/ window.DESIGN_CUSTOMIZATION = `{/,/}`;/c\
+    window.DESIGN_CUSTOMIZATION = {\
+    "primary_color": "#0056a4",\
+    "secondary_color": "#ffae00",\
+    "background_color": "#0b7db4",\
+    "header_bg_color": "#45b3ec",\
+    "footer_bg_color": "#45b3ec",\
+    "left_side_bg_color": "#04a2f3",\
+    "right_side_bg_color": "#04a2f3",\
+    "custom_logo": "https:\/\/digitalservices.lk\/wp-content\/uploads\/2021\/04\/DIGI-LOGO-2.png"\
+  };' client/dist/assets/config.js
 
   rm client.zip
 }
