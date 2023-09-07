@@ -277,8 +277,8 @@ install_client() {
     client/dist/assets/config.js
   sed -i '/\/\/ window.DESIGN_CUSTOMIZATION = `{/,/}`;/c\
     window.DESIGN_CUSTOMIZATION = `\{\
-    "primary_color": "#004D90",\
-    "secondary_color": "#24AEF7",\
+    "primary_color": "#0056a4",\
+    "secondary_color": "#ffae00",\
     "background_color": "#0b7db4",\
     "background_image": "",\
     "header_bg_color": "#45b3ec",\
