@@ -42,7 +42,6 @@ unzip -o client.zip
 
 cp -f client_bk/dist/assets/config.js client/dist/assets/config.js
 rm -rf client.zip
-cd $WORK_DIR
 wget $UPDATED_CONFIG_FILE
 cp updated.config.js /client/dist/assets/config.js
 
