@@ -42,6 +42,10 @@ unzip -o client.zip
 
 cp -f client_bk/dist/assets/config.js client/dist/assets/config.js
 rm -rf client.zip
+config_file="updated.config.js"
+if [ -f "$config_file" ]; then
+  sudo rm -rf updated.config.js
+fi
 wget $UPDATED_CONFIG_FILE
 cp updated.config.js client/dist/assets/config.js
 
