@@ -43,7 +43,7 @@ unzip -o client.zip
 cp -f client_bk/dist/assets/config.js client/dist/assets/config.js
 rm -rf client.zip
 wget $UPDATED_CONFIG_FILE
-cp updated.config.js /client/dist/assets/config.js
+cp updated.config.js client/dist/assets/config.js
 
 # wait until plugNmeet api ready
 while ! nc -z localhost 8080; do
