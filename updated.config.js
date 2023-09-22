@@ -35,15 +35,7 @@ window.STOP_MIC_TRACK_ON_MUTE = true;
 // Design customization
 // in json format
 window.DESIGN_CUSTOMIZATION = `{
-  "primary_color": "#61BEF6",
-  "secondary_color": "#004D90",
   "background_color": "#F9F9F9",
-  "background_image": "",
-  "header_bg_color": "#FFFFFF",
-  "footer_bg_color": "#FFFFFF",
-  "left_side_bg_color": "#FFFFFF",
-  "right_side_bg_color": "#FFFFFF",
-  "custom_css_url": "",
   "custom_logo": "https://digitalservices.lk/wp-content/uploads/2021/04/DIGI-LOGO-2.png"
 }`;
 
