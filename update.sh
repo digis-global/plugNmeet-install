@@ -8,6 +8,7 @@ WORK_DIR=/opt/plugNmeet
 CLIENT_DOWNLOAD_URL="https://github.com/mynaparrot/plugNmeet-client/releases/latest/download/client.zip"
 RECORDER_DOWNLOAD_URL="https://github.com/mynaparrot/plugNmeet-recorder/releases/latest/download/recorder.zip"
 UPDATED_CONFIG_FILE="https://raw.githubusercontent.com/inme-digital-services/plugNmeet-install/main/updated.config.js"
+UPDATED_INDEX_FILE="https://raw.githubusercontent.com/inme-digital-services/plugNmeet-install/main/updated.index.html"
 
 if [ ! -d "$WORK_DIR" ]; then
   echo "Didn't find working directory. exiting.."
@@ -43,11 +44,19 @@ unzip -o client.zip
 cp -f client_bk/dist/assets/config.js client/dist/assets/config.js
 rm -rf client.zip
 config_file="updated.config.js"
-if [ -f "$config_file" ]; then
-  sudo rm -rf updated.config.js
+if [ -f $config_file ]; then
+  sudo rm -rf $config_file
 fi
 wget $UPDATED_CONFIG_FILE
-cp updated.config.js client/dist/assets/config.js
+cp $config_file client/dist/assets/config.js
+
+index_file="updated.index.html"
+if [ -f $index_file ]; then
+  sudo rm -rf $index_file
+fi
+wget $UPDATED_INDEX_FILE
+cp $index_file client/dist/index.html
+
 
 # wait until plugNmeet api ready
 while ! nc -z localhost 8080; do
