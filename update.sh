@@ -4,10 +4,8 @@ if [ $EUID != 0 ]; then echo "You must run this script as root."; fi
 
 WORK_DIR=/opt/plugNmeet
 
-## https://github.com/mynaparrot/plugNmeet-client/releases/latest/download/client.zip
-CLIENT_DOWNLOAD_URL="https://github.com/mynaparrot/plugNmeet-client/releases/latest/download/client.zip"
+CLIENT_DOWNLOAD_URL="https://github.com/inme-digital-services/plugNmeet-client/releases/latest/download/client.zip"
 RECORDER_DOWNLOAD_URL="https://github.com/mynaparrot/plugNmeet-recorder/releases/latest/download/recorder.zip"
-UPDATED_CONFIG_FILE="https://raw.githubusercontent.com/inme-digital-services/plugNmeet-install/main/updated.config.js"
 
 if [ ! -d "$WORK_DIR" ]; then
   echo "Didn't find working directory. exiting.."
@@ -40,20 +38,8 @@ mv -f client client_bk
 wget $CLIENT_DOWNLOAD_URL -O client.zip
 unzip -o client.zip
 
-cp -f client_bk/dist/assets/config.js client/dist/assets/config.js
+cp -f client/dist/assets/config_sample.js client/dist/assets/config.js
 rm -rf client.zip
-config_file="updated.config.js"
-if [ -f $config_file ]; then
-  sudo rm -rf $config_file
-fi
-wget $UPDATED_CONFIG_FILE
-cp $config_file client/dist/assets/config.js
-
-# Replace the <title> tag
-sed -i 's/<title>plugNmeet<\/title>/<title>Digi-KYC<\/title>/g' client/dist/index.html
-
-# Replace the <link> tag for the Digis logo
-sed -i 's|<link rel="icon" type="image/x-icon" href=".\/assets\/imgs\/favicon.ico">|<link rel="icon" type="image/x-icon" href="https:\/\/digitalservices.lk\/wp-content\/uploads\/2021\/04\/DIGI-LOGO-2.png">|g' client/dist/index.html
 
 
 # wait until plugNmeet api ready
