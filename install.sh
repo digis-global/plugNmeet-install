@@ -6,7 +6,7 @@ WORK_DIR=/opt/plugNmeet
 CONFIG_DOWNLOAD_URL="https://raw.githubusercontent.com/inme-digital-services/plugNmeet-install/main/install-files"
 
 ## https://github.com/mynaparrot/plugNmeet-client/releases/latest/download/client.zip
-CLIENT_DOWNLOAD_URL="https://github.com/mynaparrot/plugNmeet-client/releases/latest/download/client.zip"
+CLIENT_DOWNLOAD_URL="https://github.com/inme-digital-services/plugNmeet-client/releases/latest/download/client.zip"
 RECORDER_DOWNLOAD_URL="https://github.com/mynaparrot/plugNmeet-recorder/releases/latest/download/recorder.zip"
 
 ## https://raw.githubusercontent.com/mynaparrot/plugNmeet-server/main/sql_dump/install.sql
