@@ -24,6 +24,7 @@ room:
   auto_create: false
   enabled_codecs:
     - mime: audio/opus
+    - mime: audio/red
     - mime: video/h264
     - mime: video/vp8
     - mime: video/vp9
@@ -32,6 +33,8 @@ ingress:
   rtmp_base_url: rtmp://PLUG_N_MEET_SERVER_DOMAIN/live
   whip_base_url: https://PLUG_N_MEET_SERVER_DOMAIN/whip
 signal_relay:
+  enabled: true
+psrpc:
   enabled: true
 keys:
   LIVEKIT_API_KEY: LIVEKIT_SECRET
